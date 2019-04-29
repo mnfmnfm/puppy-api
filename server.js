@@ -15,4 +15,9 @@ app.get('/isitworking', (request, response) => {
   response.send('yes');
 });
 
+app.get('/bailey', (request, response) => {
+  let baileyData = require('./data/puppy.json');
+  response.send(baileyData);
+});
+
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
